@@ -1,0 +1,9 @@
+.container {
+  background-color: var(--darkBlack);
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.container p {
+  font-size: 90%;
+}
