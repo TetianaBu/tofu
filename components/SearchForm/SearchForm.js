@@ -5,10 +5,10 @@ import SearchResult from "./SearchResult.js";
 import styles from "./SearchForm.module.css";
 
 function SearchForm() {
-  const [searchTerm, setSearchTerm] = React.useState("");
-  const [searchResults, setSearchResults] = React.useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState(null);
 
-  const [status, setStatus] = React.useState("idle");
+  const [status, setStatus] = useState("idle");
 
   async function handleSearch(event) {
     event.preventDefault();
