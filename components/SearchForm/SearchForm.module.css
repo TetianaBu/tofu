@@ -39,8 +39,8 @@
 
 .form button:hover,
 .form button:focus {
-  background-color: hsl(133, 57%, 44%);
-  border-color: hsl(133, 57%, 44%);
+  background-color: var(--greenAccent);
+  border-color: var(--greenAccent);
 }
 
 .successContainer {
@@ -51,6 +51,6 @@
 
 .searchResults {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }

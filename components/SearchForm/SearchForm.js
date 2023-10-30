@@ -30,6 +30,7 @@ function SearchForm() {
     } else {
       setStatus("error");
     }
+    setSearchTerm("");
   }
 
   return (
@@ -37,6 +38,7 @@ function SearchForm() {
       <form onSubmit={handleSearch} className={styles.form}>
         <TextInput
           required={true}
+          aria-label="Search through database"
           label="Search for:"
           placeholder="firm polsoja"
           value={searchTerm}
@@ -45,9 +47,9 @@ function SearchForm() {
         <button type="submit">Find</button>
       </form>
       <div className={styles.responseContainer}>
-        {status === "idle" && <p>Welcome to search!</p>}
+        {status === "idle" && <p>Welcome to the search!</p>}
         {status === "loading" && <p>Searching...</p>}
-        {status === "error" && <p>Something went wrong!</p>}
+        {status === "error" && <p>Sory, something went wrong!</p>}
         {status === "empty" && <p>No results</p>}
         {status === "success" && (
           <div className={styles.successContainer}>

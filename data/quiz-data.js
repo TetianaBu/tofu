@@ -7,16 +7,16 @@ export const QUIZ_DATA = {
       text: "Take a look",
       subQuestions: [
         {
-          text: "knowledge",
+          text: "Knowledge",
           action: {
-            message: "Moving to the about",
+            message: "Moving to the About",
             link: "/blog/learn",
           },
         },
         {
           text: "Inspiration",
           action: {
-            message: "Moving to the inspo",
+            message: "Moving to the Inspo",
             link: "/blog/inspo",
           },
         },
@@ -28,14 +28,14 @@ export const QUIZ_DATA = {
         {
           text: "Go to the database",
           action: {
-            message: "Moving to the db",
+            message: "Moving to the DB",
             link: "/finder/database",
           },
         },
         {
           text: "Choose by firmness",
           action: {
-            message: "Moving to the firmness",
+            message: "Moving to the Firmness",
             link: "/finder/firmness",
           },
         },
