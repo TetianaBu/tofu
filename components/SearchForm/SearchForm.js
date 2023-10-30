@@ -12,11 +12,9 @@ function SearchForm() {
 
   async function handleSearch(event) {
     event.preventDefault();
-
     setStatus("loading");
-
     const response = await fetch(
-      `http://localhost:3000/api/get-products?searchTerm=${searchTerm}`
+      `https://tofu-seven.vercel.app/api/get-products?searchTerm=${searchTerm}`
     );
 
     if (response.ok) {
