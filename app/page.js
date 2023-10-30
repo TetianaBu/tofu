@@ -1,4 +1,5 @@
+import Quiz from "@/components/Quiz";
 
 export default function Home() {
-  return   <main>some</main>
+  return <Quiz />;
 }

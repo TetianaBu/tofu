@@ -1,6 +1,6 @@
 import { Jura } from "next/font/google";
 import "./globals.css";
-import { APPTITLE } from "../constants";
+import { APPTITLE } from "../data/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

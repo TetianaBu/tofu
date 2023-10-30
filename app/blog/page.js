@@ -1,3 +1,5 @@
-export default function Blog() {
-    return <div>Blog</div>;
-  }
+import Blog from "@/components/Blog";
+
+export default function BlogPage() {
+  return <Blog />;
+}
