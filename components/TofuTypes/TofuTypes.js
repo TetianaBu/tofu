@@ -1,6 +1,6 @@
 "use client";
 import React, { Fragment, useState } from "react";
-import { FIRMNESSLEVELS } from "../../constants";
+import { FIRMNESSLEVELS } from "../../data/constants";
 import styles from "./TofuTypes.module.css";
 import DetailsModal from "./DetailsModal";
 
