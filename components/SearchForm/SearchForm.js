@@ -1,0 +1,67 @@
+"use client";
+import React, { useState } from "react";
+import TextInput from "./TextInput.js";
+import SearchResult from "./SearchResult.js";
+import styles from "./SearchForm.module.css";
+
+function SearchForm() {
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState(null);
+
+  const [status, setStatus] = React.useState("idle");
+
+  async function handleSearch(event) {
+    event.preventDefault();
+
+    setStatus("loading");
+
+    const response = await fetch(
+      `http://localhost:3000/api/get-products?searchTerm=${searchTerm}`
+    );
+
+    if (response.ok) {
+      const json = await response.json();
+      if (json.status === 200) {
+        setSearchResults(json.data);
+        setStatus(json.data.length > 0 ? "success" : "empty");
+      } else {
+        setStatus("error");
+      }
+    } else {
+      setStatus("error");
+    }
+  }
+
+  return (
+    <div className={styles.container}>
+      <form onSubmit={handleSearch} className={styles.form}>
+        <TextInput
+          required={true}
+          label="Search for:"
+          placeholder="firm polsoja"
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
+        />
+        <button type="submit">Find</button>
+      </form>
+      <div className={styles.responseContainer}>
+        {status === "idle" && <p>Welcome to search!</p>}
+        {status === "loading" && <p>Searching...</p>}
+        {status === "error" && <p>Something went wrong!</p>}
+        {status === "empty" && <p>No results</p>}
+        {status === "success" && (
+          <div className={styles.successContainer}>
+            <h2>Search Results:</h2>
+            <div className={styles.searchResults}>
+              {searchResults.map((result) => (
+                <SearchResult key={result.id} result={result} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default SearchForm;
