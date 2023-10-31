@@ -2,7 +2,7 @@ import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export async function PUT(req, res) {
+export async function POST(req, res) {
   console.log(req.body, "req.body;");
   console.log(req);
   if (req.method === "PUT") {
@@ -10,7 +10,7 @@ export async function PUT(req, res) {
     console.log("Received data:", { name, email, message });
     const msg = `Name: ${name}\r\n Email: ${email}\r\n Message: ${message}`;
     const data = {
-      to: "tetianataker@gmail.com",
+      to: "hello@tofcio.com",
       from: { email },
       subject: `${name.toUpperCase()} sent you a message from Contact Form`,
       text: `Email => ${email}`,

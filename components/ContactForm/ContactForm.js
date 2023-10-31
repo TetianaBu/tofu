@@ -30,7 +30,7 @@ function ContactForm() {
       });
 
       const response = await fetch("/api/contact", {
-        method: "PUT",
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
