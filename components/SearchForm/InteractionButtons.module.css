@@ -1,0 +1,33 @@
+.buttonsContainer {
+  align-self: flex-end;
+  padding: 0.1rem 1rem;
+  background-color: hsl(61, 67%, 87%, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.buttonWrapper {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.2rem;
+}
+
+.likesTotal {
+  font-size: 1.25rem;
+  margin-top: -0.1rem;
+}
+
+.buttonWrapper button {
+  cursor: pointer;
+  background-color: transparent;
+  border: transparent;
+  color: inherit;
+}
+
+.buttonWrapper button:hover,
+.buttonWrapper button:focus {
+  color: var(--greenAccent);
+}
