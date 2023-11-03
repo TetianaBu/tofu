@@ -1,8 +1,6 @@
 import { db } from "@vercel/postgres";
-import { NextResponse } from "next/server";
 
 export async function GET(req, res) {
-
   const url = new URL(req.url);
   const searchParams = url.searchParams;
   const searchTerm = searchParams.get("searchTerm");
@@ -37,10 +35,10 @@ export async function GET(req, res) {
       products = result.rows;
     }
 
-    return NextResponse.json({ status: 200, data: products });
+    return res.json({ status: 200, data: products });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ status: 500, error: "Internal Server Error" });
+    return res.json({ status: 500, error: "Internal Server Error" });
   } finally {
     client.release();
   }
