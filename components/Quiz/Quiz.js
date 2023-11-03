@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import styles from "./Quiz.module.css";
-import { QUIZ_DATA } from "../../data/quiz-data";
+import { QUIZ_DATA } from "@/data/quiz-data";
 
 function Quiz() {
   const [activeIndex, setActiveIndex] = useState(-1);

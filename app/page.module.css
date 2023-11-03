@@ -1,0 +1,18 @@
+.container {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.introContainer {
+  display: grid;
+  gap: 2rem;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  gap: 2rem;
+}

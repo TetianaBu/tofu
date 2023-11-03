@@ -36,7 +36,6 @@ function ContactForm() {
         },
         body: requestBody,
       });
-      console.log(response, "response");
       if (response.status === 200) {
         setValues({ name: "", email: "", message: "" });
         setLoading(false);

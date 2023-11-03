@@ -3,18 +3,17 @@ import React from "react";
 import { Menu as IconMenu } from "react-feather";
 import styles from "./Header.module.css";
 
-import useToggle from "../../lib/hooks/use-toggle";
+import useToggle from "@/lib/hooks/use-toggle";
 
 import TextForScreenReaders from "@/components/TextForScreenReaders";
 import DrawerMenu from "@/components/DrawerMenu";
 import Logo from "@/components/Logo";
 
-
 function Header() {
   const [isMenuOpen, toggleIsMenuOpen] = useToggle(false);
 
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Logo />
       <nav className={styles.menu} role="navigation" aria-label="Main menu">
         <button
@@ -27,7 +26,7 @@ function Header() {
         </button>
         {isMenuOpen && <DrawerMenu handleDismiss={toggleIsMenuOpen} />}
       </nav>
-    </div>
+    </header>
   );
 }
 

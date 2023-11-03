@@ -1,7 +1,7 @@
 import React from "react";
 import { Star } from "react-feather";
 import styles from "./Rating.module.css";
-import { range } from "../../lib/range";
+import { range } from "@/lib/range";
 
 function Rating({ rating, maxRating = 5 }) {
   return (

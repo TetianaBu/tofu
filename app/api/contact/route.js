@@ -3,11 +3,8 @@ import sgMail from "@sendgrid/mail";
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req, res) {
-  console.log(req.body, "req.body;");
-  console.log(req);
   if (req.method === "PUT") {
     const { name, email, message } = req.body;
-    console.log("Received data:", { name, email, message });
     const msg = `Name: ${name}\r\n Email: ${email}\r\n Message: ${message}`;
     const data = {
       to: "hello@tofcio.com",
@@ -18,7 +15,6 @@ export async function POST(req, res) {
     };
 
     try {
-      console.log(data, "inside");
       await sgMail.send(data);
       res.status(200).json({
         message: "Your message was sent successfully.",

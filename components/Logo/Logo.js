@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./Logo.module.css";
-import logoIcon from "../../public/logo-full.svg";
+import logoIcon from "@/public/logo-full.svg";
 
 function Logo() {
   return (

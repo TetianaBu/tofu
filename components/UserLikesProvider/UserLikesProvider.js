@@ -5,7 +5,6 @@ export const UserLikesProviderContext = createContext();
 function UserLikesProvider({ children }) {
   const [userLikes, setUserLikes] = React.useState({});
 
-  console.log(userLikes);
   function handleLike(id) {
     if (!userLikes.id) {
       setUserLikes({ id: true });
