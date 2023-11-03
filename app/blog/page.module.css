@@ -1,0 +1,15 @@
+.container {
+  margin: 2rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sections {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}

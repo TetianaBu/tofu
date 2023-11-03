@@ -1,0 +1,10 @@
+.container {
+  margin: 2rem;
+  display: grid;
+}
+
+@media (min-width: 48rem) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
