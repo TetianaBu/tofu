@@ -17,6 +17,7 @@ function ContactForm() {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,6 +43,7 @@ function ContactForm() {
         setSuccess(true);
       } else {
         setLoading(false);
+        setError(true);
       }
     } catch (error) {
       setLoading(false);
@@ -56,61 +58,64 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <div className={styles.formGroupsContainer}>
-        <div className={styles.formGroup}>
-          <label htmlFor={nameId}>Name:</label>
-          <input
-            value={values.name}
-            onChange={handleChange}
-            id={nameId}
-            name="name"
-            aria-label="Name"
-            autoComplete="on"
-          />
+    <>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <div className={styles.formGroupsContainer}>
+          <div className={styles.formGroup}>
+            <label htmlFor={nameId}>Name:</label>
+            <input
+              value={values.name}
+              onChange={handleChange}
+              id={nameId}
+              name="name"
+              aria-label="Name"
+              autoComplete="on"
+            />
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor={emailId}>Email:</label>
+            <input
+              onChange={handleChange}
+              className={styles.input}
+              id={emailId}
+              name="email"
+              required={true}
+              disabled={loading}
+              type="email"
+              aria-label="Email address"
+              autoComplete="on"
+              value={values.email}
+            />
+          </div>
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor={emailId}>Email:</label>
-          <input
+          <label htmlFor={messageId}>Your message:</label>
+          <textarea
             onChange={handleChange}
             className={styles.input}
-            id={emailId}
-            name="email"
+            id={messageId}
+            name="message"
             required={true}
+            minLength={10}
+            maxLength={1000}
             disabled={loading}
-            type="email"
-            aria-label="Email address"
-            autoComplete="on"
-            value={values.email}
+            type="text"
+            aria-label="Message"
+            value={values.message}
           />
         </div>
-      </div>
-      <div className={styles.formGroup}>
-        <label htmlFor={messageId}>Your message:</label>
-        <textarea
-          onChange={handleChange}
-          className={styles.input}
-          id={messageId}
-          name="message"
-          required={true}
-          minLength={10}
-          maxLength={1000}
-          disabled={loading}
-          type="text"
-          aria-label="Message"
-          value={values.message}
-        />
-      </div>
-      <div className={styles.buttonGroup}>
-        <button
-          disabled={loading}
-          type="submit"
-          className={styles.submitButton}
-        >
-          {loading ? "Submitting…" : "Submit"}
-        </button>
-      </div>
-    </form>
+        <div className={styles.buttonGroup}>
+          <button
+            disabled={loading}
+            type="submit"
+            className={styles.submitButton}
+          >
+            {loading ? "Submitting…" : "Submit"}
+          </button>
+        </div>
+      </form>
+      {error && "Sorry. There was an error"}
+    </>
   );
 }
 

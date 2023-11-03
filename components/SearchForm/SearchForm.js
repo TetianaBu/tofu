@@ -14,7 +14,7 @@ function SearchForm() {
     event.preventDefault();
     setStatus("loading");
     const response = await fetch(
-      `https://tofu-seven.vercel.app/api/get-products?searchTerm=${searchTerm}`
+      `https://www.tofcio.com/api/get-products?searchTerm=${searchTerm}`
     );
 
     if (response.ok) {
