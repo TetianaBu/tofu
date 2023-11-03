@@ -13,7 +13,7 @@ function SearchForm() {
   async function handleSearch(event) {
     event.preventDefault();
     setStatus("loading");
-    const response = await fetch(`https://tofu-tetianabu.vercel.app/api/get-products?searchTerm=${searchTerm}`);
+    const response = await fetch(`https://www.tofcio.com/api/get-products?searchTerm=${searchTerm}`);
 
     if (response.ok) {
       const json = await response.json();
