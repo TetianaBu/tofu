@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  max-height: fit-content;
+  padding: 2rem;
+  text-align: center;
+}
+
+.info {
+  background-color: var(--pink20);
+}
