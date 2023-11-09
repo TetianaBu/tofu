@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.15.10",
     "@sendgrid/client": "^7.7.0",
     "@sendgrid/mail": "^7.7.0",
+    "@types/three": "^0.158.2",
     "@vercel/postgres": "^0.5.0",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
@@ -22,6 +24,7 @@
     "react-feather": "^2.0.10",
     "react-focus-lock": "^2.9.6",
     "react-remove-scroll": "^2.5.7",
+    "three": "^0.158.0",
     "vercel": "^32.5.0"
   },
   "devDependencies": {
