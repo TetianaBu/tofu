@@ -1,6 +1,7 @@
 .container {
   margin: 2rem;
   display: grid;
+  gap: 2rem;
 }
 
 @media (min-width: 48rem) {
