@@ -1,0 +1,32 @@
+.container {
+  justify-self: end;
+  display: block;
+  max-width: fit-content;
+  margin: 2rem;
+}
+
+.beansContainer {
+  position: relative;
+}
+
+.beansContainer img {
+  position: absolute;
+}
+
+.beansContainer img:nth-child(2) {
+  left: 10px;
+}
+
+.beansContainer img:nth-child(3) {
+  top: -220px;
+  right: -20px;
+}
+
+.beansContainer img:nth-child(4) {
+  right: -50px;
+  top: -220px;
+}
+
+.beansContainer img:first-child {
+  left: -20px;
+}
