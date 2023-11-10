@@ -1,0 +1,17 @@
+.container {
+  min-height: 50svh;
+  display: grid;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .text {
+    grid-row: 1;
+    align-self: center;
+  }
+}

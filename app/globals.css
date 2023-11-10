@@ -11,6 +11,7 @@
 :root {
   --white: hsla(0, 0%, 100%, 1);
   --white50: hsla(0, 0%, 100%, 0.5);
+  --white10: hsla(0, 0%, 100%, 0.1);
   --black: hsla(0, 0%, 15%, 1);
   --black50: hsla(0, 0%, 15%, 0.5);
   --black10: hsla(0, 0%, 15%, 0.1);
@@ -21,6 +22,7 @@
   --green10: hsla(133, 57%, 64%, 0.1);
   --lightYellow: hsl(61, 67%, 87%);
   --pink: hsl(340, 57%, 64%);
+  --pink20: hsl(340, 57%, 64%, 0.2);
 }
 
 body {

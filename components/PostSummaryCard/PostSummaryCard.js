@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { format } from "date-fns";
-import styles from "./PostSummaryCard";
+import styles from "./PostSummaryCard.module.css";
 
 function PostSummaryCard({ type, slug, title, publishedOn, abstract }) {
   const href = `/blog/${type}/${slug}`;
